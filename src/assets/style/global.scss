@@ -1,0 +1,70 @@
+@import "variables";
+@import "mixin";
+
+
+.G-cursor-pointer {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey-10;
+  border-radius: 20px;
+}
+
+.G-hidden {
+  overflow: hidden;
+}
+.G-padding-15{
+  padding: 15px;
+}
+.G-container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+  @include screen-max-width-767{
+    padding: 0 20px;
+  }
+  @include screen-max-width-576{
+    padding: 0 20px;
+  }
+}
+.G-button-color{
+  background-color: $yellow;
+  &:hover{
+    background-color: #fac802;
+    transition: 0.5s;
+  }
+}
+.G-input-radio{
+    background-color: $white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 15px;
+    margin-right: 15px;
+    position: relative;
+    width: 15px;
+
+  &:after {
+    background-color: $grey-base;
+    border-radius: 25px;
+    content: '';
+    display: block;
+    height: 7px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 7px;
+  }
+  &:checked:after {
+    background-color: $yellow;
+
+  }
+}
